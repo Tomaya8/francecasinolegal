@@ -25,13 +25,13 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/legalite-regulations"
-              className="bg-gold text-background font-semibold px-6 py-3 rounded-lg hover:bg-gold-light transition-colors no-underline"
+              className="bg-gold text-white font-semibold px-6 py-3 rounded-lg hover:bg-gold-dark transition-colors no-underline"
             >
               Comprendre la Légalité
             </Link>
             <Link
               href="/types-de-bonus"
-              className="border border-gold text-gold font-semibold px-6 py-3 rounded-lg hover:bg-gold hover:text-background transition-colors no-underline"
+              className="border border-gold text-gold font-semibold px-6 py-3 rounded-lg hover:bg-gold hover:text-white transition-colors no-underline"
             >
               Voir les Bonus
             </Link>

@@ -40,11 +40,14 @@ h1, h2, h3 {
   color: var(--foreground);
 }
 
-a {
+a:not([class*="text-"]) {
   color: var(--gold);
-  transition: color 0.2s;
 }
 
-a:hover {
+a:not([class*="text-"]):hover {
   color: var(--gold-dark);
+}
+
+a {
+  transition: color 0.2s;
 }
