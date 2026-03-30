@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Breadcrumb from "@/components/Breadcrumb";
+import FaqSchema from "@/components/FaqSchema";
 
 export const metadata: Metadata = {
   title: "Comprendre les conditions de mise (Wagering) casino",
@@ -9,6 +11,10 @@ export const metadata: Metadata = {
 export default function ComprendreWagering() {
   return (
     <article className="max-w-4xl mx-auto px-4 py-12">
+      <Breadcrumb items={[
+        { label: "Blog", href: "/blog" },
+        { label: "Conditions de mise (Wagering)" },
+      ]} />
       <h1 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
         Comprendre les conditions de mise (Wagering) avant d&rsquo;accepter un bonus
       </h1>
@@ -202,6 +208,13 @@ export default function ComprendreWagering() {
           </p>
         </details>
       </div>
+
+      <FaqSchema faqs={[
+        { question: "Que se passe-t-il si je n'atteins pas le wagering dans le delai imparti ?", answer: "Si vous ne completez pas les conditions de mise avant l'expiration du bonus (generalement 7 a 30 jours), le bonus restant et les gains associes seront annules. Votre depot initial reste generalement disponible, mais tous les gains provenant du bonus sont perdus." },
+        { question: "Le wagering s'applique-t-il aussi aux tours gratuits (free spins) ?", answer: "Oui, dans la plupart des cas. Les gains issus des tours gratuits sont soumis a leurs propres conditions de mise, qui peuvent differer de celles du bonus principal. Certains casinos offrent cependant des tours gratuits sans wagering (wager-free), ce qui signifie que les gains sont directement retirables." },
+        { question: "Puis-je refuser un bonus et jouer sans conditions de mise ?", answer: "Absolument. Sur la plupart des casinos, vous pouvez decliner le bonus lors du depot ou contacter le support pour le faire retirer. Jouer sans bonus signifie aucune restriction de retrait, aucune mise maximale imposee et une liberte totale sur le choix des jeux." },
+        { question: "Qu'est-ce qu'un sticky bonus ?", answer: "Un sticky bonus (ou bonus non retirable) est un bonus dont le montant ne peut jamais etre retire - seuls les gains generes avec ce bonus sont retirables apres avoir rempli les conditions de mise. Le montant du bonus est retire de votre solde au moment du retrait." },
+      ]} />
     </article>
   );
 }

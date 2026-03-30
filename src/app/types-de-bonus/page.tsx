@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import FaqSchema from "@/components/FaqSchema";
 
 export const metadata: Metadata = {
   title: "Types de Bonus Casino en Ligne | Guide Complet 2026",
@@ -449,6 +450,41 @@ export default function TypesDeBonus() {
           </p>
         </details>
       </div>
+
+      <FaqSchema
+        faqs={[
+          {
+            question:
+              "Qu'est-ce que le wagering et pourquoi est-ce important ?",
+            answer:
+              "Le wagering (ou conditions de mise) est le nombre de fois que vous devez miser le montant du bonus avant de pouvoir retirer vos gains. Par exemple, un bonus de 100 euros avec un wagering x30 signifie que vous devez placer 3 000 euros de mises au total. Plus le wagering est bas, plus le bonus est avantageux.",
+          },
+          {
+            question:
+              "Peut-on retirer un bonus sans depot immediatement ?",
+            answer:
+              "Non, les bonus sans depot sont toujours soumis a des conditions de mise (generalement x40 a x60) et un plafond de gains retirables. Vous devez remplir le wagering et les conditions avant tout retrait. Ils servent principalement a tester le casino, pas a retirer de l'argent immediatement.",
+          },
+          {
+            question:
+              "Les tours gratuits sont-ils toujours un bon deal ?",
+            answer:
+              "Pas toujours. La valeur reelle depend de la mise par spin (0,10 euros vs 0,50 euros), du wagering sur les gains et du jeu concerne. Les tours gratuits sans wagering sont excellents. Les tours avec wagering x40+ et une valeur de 0,10 euros/spin ont une valeur reelle tres faible.",
+          },
+          {
+            question:
+              "Quel est le meilleur type de bonus pour un joueur regulier ?",
+            answer:
+              "Le cashback est generalement le meilleur bonus pour les joueurs reguliers grace a son wagering tres faible (souvent x1 ou aucun) et sa recurrence (hebdomadaire ou mensuel). Les programmes VIP amplifient encore cet avantage avec des taux de cashback plus eleves et des recompenses exclusives.",
+          },
+          {
+            question:
+              "Peut-on cumuler plusieurs bonus sur un meme casino ?",
+            answer:
+              "En regle generale, non. La plupart des casinos n'autorisent qu'un seul bonus actif a la fois. Vous devez terminer le wagering de votre bonus en cours (ou l'annuler) avant d'en reclamer un nouveau. Verifiez toujours les conditions generales du casino pour les regles specifiques.",
+          },
+        ]}
+      />
     </article>
   );
 }

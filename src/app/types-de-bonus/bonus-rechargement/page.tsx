@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Breadcrumb from "@/components/Breadcrumb";
+import FaqSchema from "@/components/FaqSchema";
 
 export const metadata: Metadata = {
   title: "Bonus de Rechargement Casino — Guide Complet",
@@ -9,6 +11,10 @@ export const metadata: Metadata = {
 export default function BonusRechargement() {
   return (
     <article className="max-w-4xl mx-auto px-4 py-12">
+      <Breadcrumb items={[
+        { label: "Types de Bonus", href: "/types-de-bonus" },
+        { label: "Bonus de Rechargement" },
+      ]} />
       <h1 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
         Bonus de Rechargement Casino : Maximisez Chaque D&eacute;p&ocirc;t en 2026
       </h1>
@@ -291,6 +297,14 @@ export default function BonusRechargement() {
           </p>
         </details>
       </div>
+
+      <FaqSchema faqs={[
+        { question: "Le bonus de rechargement est-il disponible sur tous les casinos ?", answer: "Non, tous les casinos ne proposent pas de bonus de rechargement regulier. Certains se concentrent uniquement sur le bonus de bienvenue et les tours gratuits promotionnels. Avant de vous inscrire sur un casino, verifiez la section Promotions pour voir si des offres de rechargement sont proposees aux joueurs existants." },
+        { question: "Faut-il un code bonus pour activer le rechargement ?", answer: "Cela depend du casino. Certains appliquent automatiquement le bonus de rechargement a chaque depot eligible, tandis que d'autres exigent un code bonus specifique a entrer lors du depot. Les codes sont generalement communiques par e-mail, dans la section promotions du site ou par le gestionnaire de compte pour les VIP." },
+        { question: "Peut-on refuser le bonus et deposer sans conditions ?", answer: "Oui, dans la plupart des cas. Si le bonus de rechargement n'est pas automatique, il suffit de ne pas entrer le code ou de ne pas cliquer sur Reclamer. C'est recommande si vous prevoyez un retrait rapide, car un bonus actif bloque generalement les retraits jusqu'a ce que le wagering soit rempli." },
+        { question: "Le bonus de rechargement s'ameliore-t-il avec le statut VIP ?", answer: "Oui, dans la majorite des casinos. Les joueurs VIP beneficient de pourcentages plus eleves (50-100 % au lieu de 25-50 %), de plafonds augmentes et parfois d'un wagering reduit. Certains casinos proposent meme des bonus de rechargement quotidiens pour leurs joueurs VIP les plus actifs." },
+        { question: "Quelle est la difference entre rechargement et bonus match ?", answer: "Les deux termes designent le meme concept : un pourcentage applique a votre depot. Match bonus est le terme anglais utilise independamment du contexte, tandis que rechargement ou reload specifie qu'il s'agit d'une offre pour les joueurs existants (par opposition au bonus de bienvenue)." },
+      ]} />
     </article>
   );
 }

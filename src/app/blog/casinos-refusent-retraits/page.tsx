@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Breadcrumb from "@/components/Breadcrumb";
+import FaqSchema from "@/components/FaqSchema";
 
 export const metadata: Metadata = {
   title: "Casino Refuse Retrait : Causes et Solutions 2026",
@@ -9,6 +11,10 @@ export const metadata: Metadata = {
 export default function CasinosRefusentRetraits() {
   return (
     <article className="max-w-4xl mx-auto px-4 py-12">
+      <Breadcrumb items={[
+        { label: "Blog", href: "/blog" },
+        { label: "Casinos refusent les retraits" },
+      ]} />
       <h1 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
         Pourquoi Certains Casinos Refusent-ils les Retraits ? Comment
         l&apos;Éviter
@@ -469,6 +475,14 @@ export default function CasinosRefusentRetraits() {
         retraits légitimes ne survit pas longtemps dans un marché de plus en
         plus régulé et transparent.
       </p>
+
+      <FaqSchema faqs={[
+        { question: "Combien de temps un casino peut-il retenir un retrait ?", answer: "Un casino serieux traite les retraits en 24 a 72 heures. Certains casinos imposent un delai de reflexion de 24 a 48 heures pendant lequel vous pouvez annuler votre retrait (une pratique controversee). Au-dela de 7 jours ouvrables sans explication valable, il est legitime de contacter le regulateur." },
+        { question: "Le casino peut-il annuler mes gains pour abus de bonus ?", answer: "Oui, si vous avez viole les conditions generales du bonus (mises excessives, jeux interdits, comptes multiples), le casino peut annuler les gains et confisquer le bonus. Cependant, cette decision doit etre justifiee par une clause specifique des CGU. Si vous estimez que la decision est abusive, documentez votre cas et faites appel aupres du regulateur." },
+        { question: "Que se passe-t-il si un casino ferme avant de payer mes gains ?", answer: "Si le casino est licence par la MGA, les fonds des joueurs doivent etre conserves sur des comptes separes et seront restitues meme en cas de faillite. Avec une licence Curacao, la protection est moindre et la recuperation des fonds peut etre difficile. C'est une raison supplementaire de privilegier les casinos sous licence MGA." },
+        { question: "Le delai de reflexion sur les retraits est-il normal ?", answer: "Certains casinos imposent un delai de 24 a 48 heures pendant lequel vous pouvez annuler votre retrait et continuer a jouer. C'est une pratique legale mais controversee, concue pour vous inciter a rejouer vos gains. Les meilleurs casinos n'imposent pas ce delai ou permettent de le desactiver dans les parametres du compte. Nous recommandons de ne jamais annuler un retrait en cours." },
+        { question: "Peut-on porter plainte en France contre un casino etranger ?", answer: "Techniquement, les casinos en ligne non licencies en France operent en dehors de la juridiction francaise, ce qui rend les recours juridiques difficiles. Votre meilleur levier est le regulateur qui a delivre la licence (MGA, Curacao). Pour les casinos ANJ (paris, poker), vous pouvez saisir l'ANJ directement. Les plateformes de mediation comme AskGamblers sont souvent plus efficaces qu'une action juridique." },
+      ]} />
     </article>
   );
 }

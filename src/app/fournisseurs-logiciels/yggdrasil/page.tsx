@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Breadcrumb from "@/components/Breadcrumb";
+import FaqSchema from "@/components/FaqSchema";
 
 export const metadata: Metadata = {
   title: "Yggdrasil — Avis et Revue Compl\u00e8te 2026",
@@ -9,6 +11,11 @@ export const metadata: Metadata = {
 export default function Yggdrasil() {
   return (
     <article className="max-w-4xl mx-auto px-4 py-12">
+      <Breadcrumb items={[
+        { label: "Fournisseurs de Logiciels", href: "/fournisseurs-logiciels" },
+        { label: "Yggdrasil" },
+      ]} />
+
       {/* H1 */}
       <h1 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
         Yggdrasil Gaming : Avis Complet sur le Ma&icirc;tre des Slots
@@ -455,6 +462,14 @@ export default function Yggdrasil() {
           </p>
         </details>
       </div>
+
+      <FaqSchema faqs={[
+        { question: "Que signifie le nom Yggdrasil ?", answer: "Yggdrasil est l'arbre cosmique de la mythologie nordique, un frene gigantesque qui relie les neuf mondes de l'univers viking. Il symbolise la connexion entre tous les etres et les dimensions. Le studio a choisi ce nom pour refleter son ambition de connecter les joueurs a des mondes de jeu immersifs et varies." },
+        { question: "Qu'est-ce que la mecanique Gigablox ?", answer: "Gigablox est une mecanique exclusive d'Yggdrasil ou des symboles geants (2x2, 3x3, 4x4, 5x5 ou 6x6) peuvent apparaitre aleatoirement sur les rouleaux. Ces symboles massifs couvrent plusieurs positions, creant des combinaisons gagnantes bien plus importantes que les symboles standard. La mecanique est utilisee dans Hades Gigablox, Lucky Neko Gigablox et d'autres titres." },
+        { question: "Les jeux Yggdrasil fonctionnent-ils bien sur mobile ?", answer: "Oui, malgre leur qualite visuelle elevee, les jeux Yggdrasil sont optimises pour mobile grace au framework iSENSE. Le studio utilise des techniques de compression et de rendu adaptees pour garantir des performances fluides sur la plupart des smartphones modernes. Cependant, les appareils tres anciens peuvent experimenter des ralentissements sur les jeux les plus gourmands visuellement." },
+        { question: "Qu'est-ce que le programme YG Masters ?", answer: "YG Masters est un programme partenaire qui permet a des studios independants de creer des jeux en utilisant le framework GATI d'Yggdrasil. Les studios partenaires beneficient de la technologie, de la distribution et des licences reglementaires d'Yggdrasil. En retour, Yggdrasil elargit son catalogue avec des jeux aux styles creatifs varies." },
+        { question: "Yggdrasil est-il un bon choix pour les joueurs debutants ?", answer: "Les jeux Yggdrasil conviennent a tous les profils de joueurs. Pour les debutants, Valley of the Gods offre un gameplay intuitif avec une volatilite moyenne. Les joueurs plus experimentes apprecieront la complexite de Vikings Go Berzerk ou Hades Gigablox. Tous les jeux sont disponibles en mode demo gratuit pour s'entrainer avant de miser de l'argent reel." },
+      ]} />
     </article>
   );
 }

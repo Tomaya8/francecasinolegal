@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Breadcrumb from "@/components/Breadcrumb";
+import FaqSchema from "@/components/FaqSchema";
 
 export const metadata: Metadata = {
   title: "Jackpots Progressifs : Comment Fonctionnent-ils ?",
@@ -9,6 +11,10 @@ export const metadata: Metadata = {
 export default function JackpotsProgressifsCommentGagner() {
   return (
     <article className="max-w-4xl mx-auto px-4 py-12">
+      <Breadcrumb items={[
+        { label: "Blog", href: "/blog" },
+        { label: "Jackpots progressifs" },
+      ]} />
       <h1 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
         Jackpots Progressifs : Comment Fonctionnent-ils et Comment Gagner ?
       </h1>
@@ -228,6 +234,14 @@ export default function JackpotsProgressifsCommentGagner() {
           </p>
         </details>
       </div>
+
+      <FaqSchema faqs={[
+        { question: "Peut-on gagner un jackpot progressif avec une petite mise ?", answer: "Oui, absolument. Le record de Mega Moolah a ete decroche avec une mise de 0,25 EUR. Cependant, certains jeux comme Major Millions exigent une mise maximale pour etre eligible au jackpot principal. Verifiez toujours les regles du jeu avant de commencer." },
+        { question: "Les jackpots progressifs sont-ils truques ?", answer: "Non, les jackpots progressifs proposes par des fournisseurs reputes (Microgaming, NetEnt) sont regules et audites par des organismes independants comme eCOGRA et iTech Labs. Les resultats sont determines par un generateur de nombres aleatoires (RNG) certifie." },
+        { question: "Quand est-ce le meilleur moment pour jouer aux jackpots progressifs ?", answer: "Il n'existe pas de moment garanti, mais statistiquement les jackpots tombent plus souvent lorsqu'ils depassent leur valeur moyenne. Par exemple, si Mega Moolah tombe en moyenne a 8 millions d'euros, jouer lorsque la cagnotte depasse ce seuil offre une esperance de gain legerement meilleure." },
+        { question: "Comment est verse un gain de jackpot progressif ?", answer: "Les petits jackpots (Mini, Minor) sont generalement verses en une seule fois. Les gains majeurs de plusieurs millions peuvent etre verses en une fois ou en versements mensuels selon le casino et le fournisseur. Les casinos les plus reputes versent la totalite en un seul paiement." },
+        { question: "Les gains de jackpot sont-ils imposables en France ?", answer: "En France, les gains de jeux de hasard en ligne ne sont generalement pas soumis a l'impot sur le revenu pour les joueurs occasionnels. Cependant, les gains exceptionnels peuvent etre soumis a la CSG sur les revenus du patrimoine. Pour des gains de plusieurs millions, consultez un conseiller fiscal specialise." },
+      ]} />
     </article>
   );
 }

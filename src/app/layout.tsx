@@ -11,12 +11,29 @@ const geistSans = Geist({
 
 export const metadata: Metadata = {
   title: {
-    default: "FranceCasinoLegal - Guide des Casinos en Ligne Légaux en France",
+    default: "FranceCasinoLegal - Casinos en Ligne Légaux France",
     template: "%s | FranceCasinoLegal",
   },
   description:
     "Découvrez les casinos en ligne légaux et fiables pour les joueurs français. Guides, bonus, régulations ANJ et comparatifs 2026.",
   metadataBase: new URL("https://francecasinolegal.com"),
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "fr_FR",
+    siteName: "FranceCasinoLegal",
+    title: "FranceCasinoLegal - Casinos en Ligne Légaux France",
+    description:
+      "Découvrez les casinos en ligne légaux et fiables pour les joueurs français. Guides, bonus, régulations ANJ et comparatifs 2026.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "FranceCasinoLegal - Casinos en Ligne Légaux France",
+    description:
+      "Découvrez les casinos en ligne légaux et fiables pour les joueurs français. Guides, bonus, régulations ANJ et comparatifs 2026.",
+  },
 };
 
 export default function RootLayout({

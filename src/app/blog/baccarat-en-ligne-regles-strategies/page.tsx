@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Breadcrumb from "@/components/Breadcrumb";
+import FaqSchema from "@/components/FaqSchema";
 
 export const metadata: Metadata = {
   title: "Baccarat en Ligne : R\u00e8gles et Strat\u00e9gies Gagnantes",
@@ -9,6 +11,10 @@ export const metadata: Metadata = {
 export default function BaccaratEnLigneReglesStrategies() {
   return (
     <article className="max-w-4xl mx-auto px-4 py-12">
+      <Breadcrumb items={[
+        { label: "Blog", href: "/blog" },
+        { label: "Baccarat : regles et strategies" },
+      ]} />
       <h1 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
         Baccarat en Ligne : R&egrave;gles Compl&egrave;tes et Strat&eacute;gies Gagnantes
       </h1>
@@ -213,6 +219,13 @@ export default function BaccaratEnLigneReglesStrategies() {
           </p>
         </details>
       </div>
+
+      <FaqSchema faqs={[
+        { question: "Pourquoi le Banquier gagne-t-il plus souvent que le Joueur ?", answer: "Le Banquier beneficie d'un avantage positionnel : il tire en dernier et sa decision de tirer une troisieme carte depend de la troisieme carte du Joueur. Cet avantage informationnel se traduit par un taux de victoire legerement superieur (45,86 % contre 44,62 %), compense par la commission de 5 %." },
+        { question: "Le suivi des tendances fonctionne-t-il au baccarat ?", answer: "Mathematiquement, non. Chaque main est independante et les resultats passes n'influencent pas les resultats futurs. Cependant, le suivi des tendances peut aider a structurer vos mises et a maintenir une discipline de jeu, ce qui a une valeur psychologique reelle." },
+        { question: "Quelle est la difference entre le baccarat et le mini-baccarat ?", answer: "Le mini-baccarat utilise les memes regles que le baccarat classique, mais avec des mises minimales plus faibles et un rythme de jeu plus rapide. En ligne, la plupart des tables sont de type mini-baccarat, accessibles des 1 EUR par main, ce qui les rend ideales pour les debutants." },
+        { question: "Peut-on jouer au baccarat gratuitement en ligne ?", answer: "Oui, la plupart des casinos en ligne proposent des versions demo du baccarat RNG (generateur de nombres aleatoires) jouables gratuitement. Les tables en direct necessitent generalement un depot, mais certains casinos offrent des tours de demonstration sur leurs tables live." },
+      ]} />
     </article>
   );
 }

@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import FaqSchema from "@/components/FaqSchema";
 
 export const metadata: Metadata = {
-  title: "FranceCasinoLegal - Casinos en Ligne Légaux pour Joueurs Français",
+  title: "Casinos en Ligne Légaux pour les Joueurs Français",
   description:
     "Comparez les meilleurs casinos en ligne légaux et sécurisés pour les joueurs français. Bonus, régulations ANJ, guides et comparatifs 2026.",
 };
@@ -354,6 +355,27 @@ export default function HomePage() {
           </details>
         </div>
       </article>
+
+      <FaqSchema
+        faqs={[
+          {
+            question: "Les casinos en ligne sont-ils legaux en France ?",
+            answer:
+              "En France, seuls les paris sportifs, hippiques et le poker en ligne sont autorises par l'ANJ. Les jeux de casino (machines a sous, roulette, blackjack) ne sont pas regules. Cependant, de nombreux joueurs francais accedent a des casinos sous licence MGA ou Curacao sans risque de poursuites individuelles.",
+          },
+          {
+            question: "Comment choisir un casino en ligne fiable ?",
+            answer:
+              "Verifiez la licence (MGA de preference), lisez les avis des joueurs, testez le service client et effectuez un petit retrait avant de deposer de grosses sommes. Consultez nos guides detailles pour chaque critere d'evaluation.",
+          },
+          {
+            question:
+              "Quels bonus de casino sont les plus interessants ?",
+            answer:
+              "Les meilleurs bonus combinent un pourcentage eleve avec des conditions de mise raisonnables (x30 ou moins). Les tours gratuits sans depot et le cashback sont egalement tres avantageux. Consultez notre page dediee aux types de bonus pour un guide complet.",
+          },
+        ]}
+      />
     </>
   );
 }

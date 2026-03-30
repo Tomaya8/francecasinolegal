@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Breadcrumb from "@/components/Breadcrumb";
+import FaqSchema from "@/components/FaqSchema";
 
 export const metadata: Metadata = {
   title: "Slots Haute vs Basse Volatilité : Quel Choix ?",
@@ -9,6 +11,10 @@ export const metadata: Metadata = {
 export default function SlotsVolatiliteHauteVsBasse() {
   return (
     <article className="max-w-4xl mx-auto px-4 py-12">
+      <Breadcrumb items={[
+        { label: "Blog", href: "/blog" },
+        { label: "Volatilite haute vs basse" },
+      ]} />
       <h1 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
         Slots Haute vs Basse Volatilité : Quel Choix pour Votre Style de Jeu ?
       </h1>
@@ -379,6 +385,13 @@ export default function SlotsVolatiliteHauteVsBasse() {
           un budget avant de jouer. Aide : 09 74 75 13 13.
         </p>
       </div>
+
+      <FaqSchema faqs={[
+        { question: "La volatilite et le RTP sont-ils la meme chose ?", answer: "Non. Le RTP (Return to Player) indique le pourcentage total redistribue aux joueurs sur le long terme. La volatilite indique comment ces gains sont distribues. Un slot peut avoir un RTP de 96 % avec une basse volatilite (gains frequents et petits) ou le meme RTP avec une haute volatilite (gains rares mais gros). Ce sont deux indicateurs complementaires a considerer ensemble." },
+        { question: "Ou trouver le niveau de volatilite d'un slot ?", answer: "La volatilite est generalement indiquee dans les regles du jeu (paytable) ou sur le site du fournisseur. Certains developpeurs comme Pragmatic Play affichent une echelle de volatilite sur 5 dans leurs fiches de jeu. Vous pouvez aussi consulter des sites specialises de revue de slots qui testent et classifient chaque machine." },
+        { question: "Peut-on gagner plus avec un slot haute volatilite ?", answer: "Pas necessairement sur le long terme. Le RTP determine le retour global. Cependant, un slot haute volatilite offre la possibilite de gains individuels beaucoup plus importants (plusieurs milliers de fois votre mise). Vous avez donc plus de chances de quitter une session avec un gain tres superieur a votre mise initiale, mais aussi plus de chances de perdre l'integralite de votre bankroll." },
+        { question: "Quel type de volatilite choisir pour utiliser un bonus ?", answer: "Pour remplir les conditions de mise d'un bonus, les slots basse volatilite sont generalement recommandes. Leurs gains frequents vous permettent de recycler votre capital plus longtemps et d'atteindre plus facilement le wagering requis. Les slots haute volatilite risquent d'epuiser votre solde bonus avant d'avoir rempli les conditions, a moins d'un gros gain chanceux." },
+      ]} />
     </article>
   );
 }

@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Breadcrumb from "@/components/Breadcrumb";
+import FaqSchema from "@/components/FaqSchema";
 
 export const metadata: Metadata = {
   title: "Cashback Casino — R\u00e9cup\u00e9rez Vos Pertes 2026",
@@ -9,6 +11,10 @@ export const metadata: Metadata = {
 export default function Cashback() {
   return (
     <article className="max-w-4xl mx-auto px-4 py-12">
+      <Breadcrumb items={[
+        { label: "Types de Bonus", href: "/types-de-bonus" },
+        { label: "Cashback" },
+      ]} />
       <h1 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
         Cashback Casino : R&eacute;cup&eacute;rez Vos Pertes et Jouez Plus Sereinement en 2026
       </h1>
@@ -268,6 +274,14 @@ export default function Cashback() {
           </p>
         </details>
       </div>
+
+      <FaqSchema faqs={[
+        { question: "Le cashback s'applique-t-il a tous les jeux ?", answer: "Cela depend du casino. Certains offrent un cashback sur tous les jeux (slots, table, live), tandis que d'autres limitent l'eligibilite aux machines a sous uniquement. Verifiez toujours les conditions specifiques, surtout si vous jouez principalement au blackjack ou a la roulette." },
+        { question: "Le cashback est-il automatique ou faut-il le reclamer ?", answer: "Les deux systemes existent. Certains casinos creditent automatiquement le cashback a la date prevue, tandis que d'autres exigent que vous le reclamiez manuellement dans un delai donne (souvent 48 a 72 heures). Oublier de reclamer signifie perdre le cashback — pensez a verifier regulierement." },
+        { question: "Peut-on combiner le cashback avec d'autres bonus ?", answer: "Generalement, le cashback ne se cumule pas avec un bonus actif. Les pertes subies pendant l'utilisation d'un bonus de bienvenue ou de tours gratuits ne sont generalement pas eligibles au cashback. Le cashback s'applique le plus souvent uniquement aux pertes sur votre solde reel (argent depose)." },
+        { question: "Quelle est la difference entre cashback et rakeback ?", answer: "Le cashback est calcule sur vos pertes nettes, tandis que le rakeback est calcule sur vos mises totales (ou les commissions prelevees). Le rakeback est plus courant dans le poker, mais certains casinos crypto l'adoptent egalement. Le rakeback est generalement plus avantageux car il s'applique meme quand vous gagnez." },
+        { question: "Le cashback vaut-il mieux qu'un gros bonus de bienvenue ?", answer: "Pour un joueur regulier, oui. Un cashback de 10 % sans wagering sur le long terme represente une valeur cumulee bien superieure a un bonus de bienvenue ponctuel avec un wagering de x30. Cependant, pour un joueur occasionnel qui ne depose qu'une fois, le bonus de bienvenue reste plus interessant." },
+      ]} />
     </article>
   );
 }

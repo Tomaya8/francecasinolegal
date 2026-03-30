@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Breadcrumb from "@/components/Breadcrumb";
+import FaqSchema from "@/components/FaqSchema";
 
 export const metadata: Metadata = {
   title: "Addiction aux Jeux : Reconnaître les Signes et Agir",
@@ -9,6 +11,10 @@ export const metadata: Metadata = {
 export default function AddictionJeuxReconnaitreAgir() {
   return (
     <article className="max-w-4xl mx-auto px-4 py-12">
+      <Breadcrumb items={[
+        { label: "Blog", href: "/blog" },
+        { label: "Addiction aux jeux : agir" },
+      ]} />
       <h1 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
         Addiction aux Jeux de Casino : Reconnaître les Signes et Agir Rapidement
       </h1>
@@ -471,6 +477,14 @@ export default function AddictionJeuxReconnaitreAgir() {
           Appel non surtaxé — 7j/7 de 8h à 2h | Chat en ligne : joueurs-info-service.fr
         </p>
       </div>
+
+      <FaqSchema faqs={[
+        { question: "L'addiction aux jeux est-elle une vraie maladie ?", answer: "Oui, le trouble du jeu d'argent est officiellement reconnu comme un trouble addictif par l'Organisation mondiale de la sante (CIM-11) et par le Manuel diagnostique et statistique des troubles mentaux (DSM-5). Il s'agit d'une pathologie qui modifie le fonctionnement du circuit de recompense du cerveau et qui necessite une prise en charge professionnelle." },
+        { question: "Comment aider un proche qui a un probleme de jeu ?", answer: "Abordez le sujet avec bienveillance, sans jugement ni accusation. Exprimez vos inquietudes en decrivant les changements que vous avez observes. Proposez-lui de contacter ensemble Joueurs Info Service (09 74 75 13 13). Ne pretez pas d'argent et ne couvrez pas ses dettes, car cela peut prolonger le probleme. Les associations comme SOS Joueurs proposent aussi un accompagnement specifique pour l'entourage." },
+        { question: "Peut-on se remettre d'une addiction aux jeux ?", answer: "Oui, le retablissement est tout a fait possible. Les therapies cognitivo-comportementales (TCC) montrent un taux de reussite eleve. De nombreuses personnes retrouvent une vie equilibree apres un traitement adapte. Le retablissement est un processus qui demande du temps et du soutien, mais des milliers de joueurs y parviennent chaque annee en France." },
+        { question: "L'interdiction volontaire ANJ est-elle definitive ?", answer: "Non, l'interdiction volontaire a une duree minimale de 3 ans. Passe ce delai, vous pouvez demander sa levee par courrier aupres de l'ANJ. Cependant, la levee n'est pas automatique : elle fait l'objet d'un examen. Beaucoup de professionnels recommandent de maintenir l'interdiction le plus longtemps possible pour securiser le retablissement." },
+        { question: "Les casinos en ligne sont-ils plus addictifs que les casinos terrestres ?", answer: "Les jeux en ligne presentent des facteurs de risque specifiques : accessibilite 24h/24, rapidite des jeux, absence de reperes temporels et facilite des depots. Cependant, l'addiction depend aussi de facteurs individuels (vulnerabilite psychologique, antecedents familiaux). Les outils d'auto-limitation en ligne peuvent paradoxalement offrir une meilleure protection que les casinos physiques." },
+      ]} />
     </article>
   );
 }

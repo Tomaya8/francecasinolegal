@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Breadcrumb from "@/components/Breadcrumb";
+import FaqSchema from "@/components/FaqSchema";
 
 export const metadata: Metadata = {
   title: "Crypto Casino vs Casino Traditionnel : le comparatif",
@@ -9,6 +11,10 @@ export const metadata: Metadata = {
 export default function CryptoCasinoVsTraditionnel() {
   return (
     <article className="max-w-4xl mx-auto px-4 py-12">
+      <Breadcrumb items={[
+        { label: "Blog", href: "/blog" },
+        { label: "Crypto vs casino traditionnel" },
+      ]} />
       <h1 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
         Crypto Casino vs Casino Traditionnel : Lequel choisir ?
       </h1>
@@ -217,6 +223,13 @@ export default function CryptoCasinoVsTraditionnel() {
           </p>
         </details>
       </div>
+
+      <FaqSchema faqs={[
+        { question: "Les crypto-casinos sont-ils legaux en France ?", answer: "Les crypto-casinos operent generalement sous des licences offshore (Curacao). Ils ne sont pas regules par l'ANJ, mais aucune loi francaise n'interdit explicitement aux joueurs d'y acceder. Le joueur n'encourt pas de sanction penale, mais la protection en cas de litige est moindre." },
+        { question: "Dois-je declarer mes gains en crypto aux impots ?", answer: "Oui. En France, les plus-values sur les cryptomonnaies sont imposables au-dela de 305 EUR de cessions annuelles. Les gains de jeu ne sont generalement pas imposes, mais la conversion de crypto en euros constitue une cession imposable. Consultez un fiscaliste pour votre situation specifique." },
+        { question: "Quelles cryptomonnaies sont acceptees dans les casinos ?", answer: "Bitcoin (BTC) est universellement accepte. Ethereum (ETH), Litecoin (LTC), Tether (USDT), Dogecoin (DOGE) et Ripple (XRP) sont egalement tres repandus. Certains casinos acceptent plus de 50 cryptomonnaies differentes. Les stablecoins comme USDT sont recommandes pour eviter la volatilite." },
+        { question: "Qu'est-ce que le provably fair ?", answer: "Le provably fair est un systeme cryptographique qui permet au joueur de verifier mathematiquement que chaque resultat de jeu est aleatoire et n'a pas ete manipule par le casino. C'est un niveau de transparence que les casinos traditionnels ne peuvent pas offrir avec les systemes RNG classiques." },
+      ]} />
     </article>
   );
 }

@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Breadcrumb from "@/components/Breadcrumb";
+import FaqSchema from "@/components/FaqSchema";
 
 export const metadata: Metadata = {
   title: "Bonus sans D\u00e9p\u00f4t Casino — Jouer Gratuitement",
@@ -9,6 +11,10 @@ export const metadata: Metadata = {
 export default function BonusSansDepot() {
   return (
     <article className="max-w-4xl mx-auto px-4 py-12">
+      <Breadcrumb items={[
+        { label: "Types de Bonus", href: "/types-de-bonus" },
+        { label: "Bonus sans Dépôt" },
+      ]} />
       <h1 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
         Bonus sans D&eacute;p&ocirc;t Casino : Jouer Gratuitement en 2026
       </h1>
@@ -256,6 +262,13 @@ export default function BonusSansDepot() {
           </p>
         </details>
       </div>
+
+      <FaqSchema faqs={[
+        { question: "Peut-on vraiment gagner de l'argent avec un bonus sans depot ?", answer: "Oui, c'est possible mais rare. En moyenne, moins de 5 % des joueurs parviennent a remplir le wagering et retirer des gains. La cle est de choisir des offres avec un wagering raisonnable (x40 max) et un plafond de gains eleve, puis de jouer sur des machines a sous a haut RTP." },
+        { question: "Pourquoi certains casinos demandent un depot pour retirer les gains du bonus sans depot ?", answer: "Cette pratique sert a verifier votre identite et votre methode de paiement, mais aussi a transformer un joueur gratuit en joueur payant. Le depot minimum demande est generalement de 10 a 20 euros. Verifiez toujours cette condition avant de jouer pour eviter les mauvaises surprises." },
+        { question: "Peut-on cumuler plusieurs bonus sans depot sur differents casinos ?", answer: "Oui, c'est tout a fait possible et c'est d'ailleurs la strategie la plus efficace. Inscrivez-vous sur plusieurs casinos reputes offrant des bonus sans depot, jouez chaque bonus dans les conditions requises, et maximisez vos chances globales de retirer des gains sur au moins l'un d'entre eux." },
+        { question: "Les bonus sans depot sont-ils disponibles sur mobile ?", answer: "Oui, tous les casinos modernes proposent leurs bonus sans depot egalement sur mobile. Certains offrent meme des bonus exclusifs a l'inscription via application mobile. Assurez-vous simplement que le casino est optimise pour votre appareil avant de vous inscrire." },
+      ]} />
     </article>
   );
 }

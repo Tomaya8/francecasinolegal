@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Breadcrumb from "@/components/Breadcrumb";
+import FaqSchema from "@/components/FaqSchema";
 
 export const metadata: Metadata = {
   title: "Fiscalité Gains Casino France : Guide Complet 2026",
@@ -9,6 +11,10 @@ export const metadata: Metadata = {
 export default function FiscaliteGainsCasinoFrance() {
   return (
     <article className="max-w-4xl mx-auto px-4 py-12">
+      <Breadcrumb items={[
+        { label: "Blog", href: "/blog" },
+        { label: "Fiscalite gains casino France" },
+      ]} />
       <h1 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
         Fiscalité des Gains de Casino en France : Guide Complet 2026
       </h1>
@@ -395,6 +401,13 @@ export default function FiscaliteGainsCasinoFrance() {
           fiscale pour votre situation personnelle.
         </p>
       </div>
+
+      <FaqSchema faqs={[
+        { question: "Dois-je declarer mes gains de casino en ligne sur ma declaration de revenus ?", answer: "Pour les gains occasionnels sur des casinos regules ANJ, non. La CSG/CRDS est prelevee automatiquement par l'operateur. En revanche, si vous etes considere comme un joueur habituel ou professionnel (gains reguliers et significatifs), vous devez declarer vos gains comme des BNC. En cas de doute, consultez un expert-comptable ou votre centre des impots." },
+        { question: "Puis-je deduire mes pertes de mes gains imposables ?", answer: "Non. En France, les pertes de jeu ne sont pas deductibles des gains imposables. Chaque gain est considere independamment. Meme si vous avez perdu 10 000 EUR avant de gagner 5 000 EUR, la CSG/CRDS s'appliquera sur le gain de 5 000 EUR (s'il depasse le seuil). C'est une difference majeure avec certains pays comme les Etats-Unis." },
+        { question: "Que risque-t-on en ne declarant pas ses gains offshore ?", answer: "La non-declaration de revenus constitue une fraude fiscale passible de sanctions pouvant aller jusqu'a 80 % de majoration sur les impots dus, plus des interets de retard. S'ajoutent les sanctions penales liees au jeu sur des plateformes illegales. Le fisc dispose de moyens de detection (echanges automatiques d'informations bancaires, surveillance des flux crypto) de plus en plus performants." },
+        { question: "Les gains de bonus casino sont-ils imposables ?", answer: "Les bonus eux-memes ne sont pas imposables tant qu'ils ne sont pas convertis en gains retirables. Une fois les conditions de mise remplies et le retrait effectue, le gain est traite comme tout autre gain de casino : soumis a la CSG/CRDS s'il depasse 1 500 EUR en un seul retrait sur un casino regule." },
+      ]} />
     </article>
   );
 }

@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Breadcrumb from "@/components/Breadcrumb";
+import FaqSchema from "@/components/FaqSchema";
 
 export const metadata: Metadata = {
   title: "Pragmatic Play — Avis et Revue Compl\u00e8te 2026",
@@ -9,6 +11,11 @@ export const metadata: Metadata = {
 export default function PragmaticPlay() {
   return (
     <article className="max-w-4xl mx-auto px-4 py-12">
+      <Breadcrumb items={[
+        { label: "Fournisseurs de Logiciels", href: "/fournisseurs-logiciels" },
+        { label: "Pragmatic Play" },
+      ]} />
+
       {/* H1 */}
       <h1 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
         Pragmatic Play : Avis Complet sur le G&eacute;ant des Slots et du
@@ -426,6 +433,13 @@ export default function PragmaticPlay() {
           </p>
         </details>
       </div>
+
+      <FaqSchema faqs={[
+        { question: "Quel est le meilleur jeu de Pragmatic Play pour les debutants ?", answer: "Pour les debutants, nous recommandons Sweet Bonanza pour sa mecanique intuitive et ses gains frequents en mode de base. Fire Joker est egalement un excellent choix avec ses 3 rouleaux classiques et sa simplicite. Les deux jeux proposent un mode demo gratuit pour s'entrainer." },
+        { question: "Pourquoi le RTP varie selon les casinos pour les jeux Pragmatic Play ?", answer: "Pragmatic Play propose ses jeux en plusieurs versions avec des RTP differents (par exemple 96,50 %, 95,50 % ou 94,50 %). C'est le casino qui choisit la version a proposer. Verifiez toujours le RTP affiche dans les regles du jeu avant de miser de l'argent reel." },
+        { question: "Qu'est-ce que la fonction Buy Bonus et vaut-elle le cout ?", answer: "Le Buy Bonus permet d'acheter directement l'acces aux tours gratuits, generalement pour 100x la mise. Mathematiquement, le RTP reste identique que vous achetiez le bonus ou que vous l'obteniez naturellement. C'est une question de preference : le Buy Bonus elimine l'attente, mais augmente la variance de votre session." },
+        { question: "Combien de jeux Pragmatic Play sort chaque mois ?", answer: "Pragmatic Play lance en moyenne quatre a six nouveaux jeux par mois, ce qui en fait l'un des studios les plus productifs de l'industrie. Ces sorties incluent des slots originales, des variations de jeux existants et des nouveautes pour le casino en direct." },
+      ]} />
     </article>
   );
 }

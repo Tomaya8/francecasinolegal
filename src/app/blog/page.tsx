@@ -177,9 +177,8 @@ export default function BlogIndex() {
         Blog — Guides et Conseils Casino
       </h1>
       <p className="text-muted mb-10 text-lg">
-        Articles experts pour les joueurs fran&ccedil;ais : strat&eacute;gies,
-        l&eacute;galit&eacute;, bonus et actualit&eacute;s du monde des casinos
-        en ligne.
+        Articles experts pour les joueurs français : stratégies, légalité, bonus
+        et actualités du monde des casinos en ligne.
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

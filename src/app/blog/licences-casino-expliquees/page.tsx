@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Breadcrumb from "@/components/Breadcrumb";
+import FaqSchema from "@/components/FaqSchema";
 
 export const metadata: Metadata = {
   title: "Licences Casino Expliquées : Curaçao, MGA, ANJ 2026",
@@ -9,6 +11,10 @@ export const metadata: Metadata = {
 export default function LicencesCasinoExpliquees() {
   return (
     <article className="max-w-4xl mx-auto px-4 py-12">
+      <Breadcrumb items={[
+        { label: "Blog", href: "/blog" },
+        { label: "Licences casino expliquees" },
+      ]} />
       <h1 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
         Les Licences de Casino Expliquées : Curaçao, MGA et ANJ — Ce Que Vous
         Devez Savoir
@@ -395,6 +401,14 @@ export default function LicencesCasinoExpliquees() {
         jeux. Votre sécurité financière et la protection de vos données
         personnelles en dépendent.
       </p>
+
+      <FaqSchema faqs={[
+        { question: "Est-il illegal de jouer sur un casino non licence en France ?", answer: "En France, c'est l'operateur non licence qui est en infraction, pas le joueur. Cependant, jouer sur un site sans licence reconnue vous expose a des risques importants : aucun recours en cas de litige, aucune garantie sur la securite de vos fonds, et pas de protection de vos donnees personnelles. Il est toujours preferable de choisir un casino sous licence MGA ou ANJ." },
+        { question: "Quelle est la meilleure licence pour un casino en ligne ?", answer: "Pour les joueurs francais, la licence MGA est generalement consideree comme le meilleur compromis entre offre de jeux complete et protection elevee. L'ANJ offre la meilleure protection mais ne couvre pas les casinos en ligne (slots, roulette). La licence de Curacao est acceptable mais avec un niveau de protection inferieur." },
+        { question: "Un casino peut-il avoir plusieurs licences ?", answer: "Oui, certains grands operateurs detiennent des licences dans plusieurs juridictions. Par exemple, un casino peut etre licence par la MGA pour le marche europeen et par l'UKGC pour le marche britannique. Detenir plusieurs licences est souvent un signe positif, car cela demontre la volonte de l'operateur de se conformer a des regulations strictes dans plusieurs pays." },
+        { question: "Que faire si un casino licence refuse de payer mes gains ?", answer: "Commencez par contacter le service client du casino et documentez tous vos echanges. Si le probleme persiste, deposez une plainte aupres de l'autorite de regulation qui a delivre la licence. Pour la MGA, utilisez le formulaire de plainte en ligne sur mga.org.mt. Pour l'ANJ, contactez-les via anj.fr. Les mediateurs independants comme eCOGRA ou The POGG peuvent egalement intervenir." },
+        { question: "Comment savoir si une licence Curacao est authentique ?", answer: "Verifiez que le casino affiche un sceau de validation cliquable qui redirige vers le site officiel de l'autorite de Curacao. Le numero de licence doit correspondre a l'entreprise exploitant le casino. Mefiez-vous des casinos qui affichent simplement un logo Curacao sans lien de verification fonctionnel : il pourrait s'agir d'un faux." },
+      ]} />
     </article>
   );
 }

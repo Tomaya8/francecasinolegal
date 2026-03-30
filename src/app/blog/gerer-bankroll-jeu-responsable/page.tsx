@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Breadcrumb from "@/components/Breadcrumb";
+import FaqSchema from "@/components/FaqSchema";
 
 export const metadata: Metadata = {
   title: "Gérer sa Bankroll Casino | Jeu Responsable 2026",
@@ -9,6 +11,10 @@ export const metadata: Metadata = {
 export default function GererBankrollJeuResponsable() {
   return (
     <article className="max-w-4xl mx-auto px-4 py-12">
+      <Breadcrumb items={[
+        { label: "Blog", href: "/blog" },
+        { label: "Gestion bankroll et jeu responsable" },
+      ]} />
       <h1 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
         Gérer sa Bankroll : Conseils pour Jouer au Casino de Manière Responsable
       </h1>
@@ -433,6 +439,13 @@ export default function GererBankrollJeuResponsable() {
           Appel non surtaxé — 7j/7 de 8h à 2h
         </p>
       </div>
+
+      <FaqSchema faqs={[
+        { question: "Quel budget minimum faut-il pour jouer au casino en ligne ?", answer: "Il n'y a pas de budget minimum absolu, mais nous recommandons au moins 50 EUR par mois pour une experience agreable sur les machines a sous (mises de 0,20 a 1 EUR par spin). Pour les jeux de table live, prevoyez au moins 100 EUR par mois. L'essentiel est que ce montant soit de l'argent dont vous n'avez pas besoin pour vos depenses quotidiennes." },
+        { question: "Comment arreter de chasser mes pertes ?", answer: "La chasse aux pertes est le piege le plus courant. Pour la combattre, fixez des limites de perte strictes avant chaque session et utilisez les outils de limitation du casino. Quand vous atteignez votre limite, fermez l'application immediatement. Rappelez-vous que chaque spin est independant : vos pertes passees n'augmentent pas vos chances de gagner au prochain tour." },
+        { question: "Est-ce que les casinos en ligne peuvent m'aider a controler mes depenses ?", answer: "Oui, les casinos serieux proposent plusieurs outils : limites de depot (quotidiennes, hebdomadaires, mensuelles), limites de pertes, limites de duree de session, alertes de realite (rappels du temps passe), et options d'auto-exclusion temporaire ou permanente. Activez ces outils des votre inscription pour une protection maximale." },
+        { question: "Le 09 74 75 13 13 est-il vraiment gratuit et confidentiel ?", answer: "Oui, Joueurs Info Service (09 74 75 13 13) est un service gratuit, anonyme et confidentiel. Les conseillers sont des professionnels formes qui peuvent vous ecouter, vous orienter vers des structures de soins adaptees et vous accompagner dans vos demarches. Le service est disponible 7 jours sur 7, de 8h a 2h du matin. Un chat en ligne est egalement disponible sur joueurs-info-service.fr." },
+      ]} />
     </article>
   );
 }

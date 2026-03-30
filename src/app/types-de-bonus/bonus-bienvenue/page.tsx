@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Breadcrumb from "@/components/Breadcrumb";
+import FaqSchema from "@/components/FaqSchema";
 
 export const metadata: Metadata = {
   title: "Bonus de Bienvenue Casino — Guide Complet 2026",
@@ -9,6 +11,10 @@ export const metadata: Metadata = {
 export default function BonusBienvenue() {
   return (
     <article className="max-w-4xl mx-auto px-4 py-12">
+      <Breadcrumb items={[
+        { label: "Types de Bonus", href: "/types-de-bonus" },
+        { label: "Bonus de Bienvenue" },
+      ]} />
       <h1 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
         Bonus de Bienvenue Casino : Le Guide Complet pour Bien D&eacute;marrer en 2026
       </h1>
@@ -295,6 +301,14 @@ export default function BonusBienvenue() {
           </p>
         </details>
       </div>
+
+      <FaqSchema faqs={[
+        { question: "Quel est le meilleur pourcentage de bonus de bienvenue ?", answer: "Un bonus de 100 % a 200 % avec un wagering de x25 a x30 represente le meilleur rapport qualite/conditions. Les bonus superieurs a 300 % sont rarement interessants car ils s'accompagnent presque toujours d'un wagering de x50 ou plus, rendant les gains pratiquement impossibles a retirer." },
+        { question: "Peut-on refuser un bonus de bienvenue ?", answer: "Oui, dans la plupart des casinos, vous pouvez choisir de ne pas reclamer le bonus lors de votre inscription. C'est parfois recommande si vous preferez retirer vos gains sans contrainte de wagering. Verifiez toutefois si le bonus est attribue automatiquement et contactez le support pour le faire retirer le cas echeant." },
+        { question: "Un package multi-depots est-il mieux qu'un bonus unique ?", answer: "Cela depend de votre profil. Un package multi-depots est ideal si vous comptez jouer regulierement sur le casino, car il repartit l'avantage sur plusieurs sessions. Un bonus unique est preferable si vous souhaitez maximiser votre premier depot sans vous engager a redeposer." },
+        { question: "Que se passe-t-il si je ne remplis pas le wagering a temps ?", answer: "Si vous ne remplissez pas les conditions de mise avant l'expiration du bonus, le casino annulera le bonus restant ainsi que tous les gains generes avec celui-ci. Votre depot initial (solde reel) restera generalement intact, mais certains casinos peuvent egalement confisquer les gains issus du solde reel si les deux sont melanges." },
+        { question: "Le bonus de bienvenue est-il reserve au premier depot ?", answer: "Le terme bonus de bienvenue designe l'offre reservee aux nouveaux joueurs. Elle peut couvrir un seul depot ou plusieurs (package). Une fois utilisee, elle ne peut pas etre reclamee a nouveau. Pour les depots suivants, vous beneficierez de bonus de rechargement, generalement moins avantageux." },
+      ]} />
     </article>
   );
 }

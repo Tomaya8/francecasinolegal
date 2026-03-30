@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Breadcrumb from "@/components/Breadcrumb";
+import FaqSchema from "@/components/FaqSchema";
 
 export const metadata: Metadata = {
   title: "Casino en Direct Live | Croupiers en Temps Réel 2026",
@@ -9,6 +11,10 @@ export const metadata: Metadata = {
 export default function CasinoEnDirectLive() {
   return (
     <article className="max-w-4xl mx-auto px-4 py-12">
+      <Breadcrumb items={[
+        { label: "Blog", href: "/blog" },
+        { label: "Casino en direct live" },
+      ]} />
       <h1 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
         Casino en Direct (Live Casino) : L&apos;Expérience Ultime avec Croupier
         en Temps Réel
@@ -391,6 +397,13 @@ export default function CasinoEnDirectLive() {
         Le casino en direct doit rester un divertissement, jamais une source de
         stress financier.
       </p>
+
+      <FaqSchema faqs={[
+        { question: "Le casino en direct est-il truque ?", answer: "Non, les jeux de casino en direct sont supervises en temps reel par des pit bosses et filmes en continu. Les resultats dependent d'actions physiques reelles (cartes, bille de roulette), ce qui rend toute manipulation detectable. Les studios sont egalement audites par des organismes independants comme eCOGRA et GLI." },
+        { question: "Peut-on jouer au casino en direct sur mobile ?", answer: "Oui, tous les principaux fournisseurs (Evolution, Pragmatic Live) optimisent leurs jeux pour les smartphones et tablettes. L'interface s'adapte automatiquement a la taille de l'ecran, et la qualite du streaming est ajustee en fonction de votre connexion. Une connexion Wi-Fi est recommandee pour eviter la consommation excessive de donnees mobiles." },
+        { question: "Quel est le budget minimum pour jouer au casino live ?", answer: "Les mises minimales varient selon le jeu et la table. La roulette live demarre souvent a 0,20 EUR, tandis que le blackjack live commence generalement a 5 EUR. Les game shows comme Crazy Time acceptent des mises des 0,10 EUR. Choisissez une table adaptee a votre bankroll pour prolonger votre session." },
+        { question: "Les bonus casino fonctionnent-ils sur les jeux en direct ?", answer: "Dans la plupart des cas, les bonus de bienvenue contribuent a hauteur de 5 a 10 % seulement au wagering sur les jeux live. Certains casinos proposent cependant des promotions specifiques au casino en direct, comme des cashback hebdomadaires ou des tournois live. Verifiez toujours les conditions generales avant de jouer avec un bonus actif." },
+      ]} />
     </article>
   );
 }

@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Breadcrumb from "@/components/Breadcrumb";
+import FaqSchema from "@/components/FaqSchema";
 
 export const metadata: Metadata = {
   title: "Programme VIP Casino — R\u00e9compenses Exclusives",
@@ -9,6 +11,10 @@ export const metadata: Metadata = {
 export default function ProgrammeVip() {
   return (
     <article className="max-w-4xl mx-auto px-4 py-12">
+      <Breadcrumb items={[
+        { label: "Types de Bonus", href: "/types-de-bonus" },
+        { label: "Programme VIP" },
+      ]} />
       <h1 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
         Programme VIP Casino : Acc&eacute;dez aux R&eacute;compenses Exclusives en 2026
       </h1>
@@ -269,6 +275,13 @@ export default function ProgrammeVip() {
           </p>
         </details>
       </div>
+
+      <FaqSchema faqs={[
+        { question: "Combien faut-il depenser pour devenir VIP ?", answer: "Cela varie considerablement selon les casinos. Pour atteindre un niveau Or typique, comptez entre 5 000 et 20 000 euros de mises mensuelles. Les niveaux Diamant ou Elite necessitent souvent 50 000 euros ou plus de mises par mois. Certains casinos crypto proposent des seuils plus accessibles grace a des structures VIP plus genereuses." },
+        { question: "Les points VIP expirent-ils ?", answer: "Oui, dans la majorite des cas. Les points non echanges expirent generalement apres 30 a 90 jours d'inactivite. De meme, votre statut VIP est reevalue periodiquement (mensuellement ou trimestriellement) et peut etre retrograde si votre volume de jeu diminue. Quelques rares casinos offrent un statut VIP a vie une fois atteint." },
+        { question: "Peut-on transferer son statut VIP d'un casino a un autre ?", answer: "Non, le statut VIP est propre a chaque casino. Cependant, certains casinos acceptent de vous accorder un statut VIP equivalent si vous pouvez prouver votre niveau sur un autre casino (captures d'ecran, attestation du gestionnaire). C'est une pratique de negociation que vous pouvez tenter, surtout aupres des casinos qui cherchent a attirer des joueurs VIP." },
+        { question: "Les programmes VIP sont-ils rentables pour les joueurs moyens ?", answer: "Les niveaux de base (Bronze, Argent) offrent des avantages modestes mais toujours bienvenus : quelques tours gratuits hebdomadaires, un cashback de 5-7,5 % et des taux de conversion de points. Pour un joueur misant 500 a 2 000 euros par mois, ces avantages representent un retour supplementaire de 1 a 3 %, ce qui n'est pas negligeable sur le long terme." },
+      ]} />
     </article>
   );
 }

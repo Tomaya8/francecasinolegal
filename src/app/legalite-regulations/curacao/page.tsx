@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Breadcrumb from "@/components/Breadcrumb";
+import FaqSchema from "@/components/FaqSchema";
 
 export const metadata: Metadata = {
   title: "Licence Curaçao — Ce que les Joueurs Doivent Savoir",
@@ -9,6 +11,10 @@ export const metadata: Metadata = {
 export default function Curacao() {
   return (
     <article className="max-w-4xl mx-auto px-4 py-12">
+      <Breadcrumb items={[
+        { label: "Légalité & Régulations", href: "/legalite-regulations" },
+        { label: "Licence Curaçao" },
+      ]} />
       {/* H1 */}
       <h1 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
         Licence Curaçao — Ce que les Joueurs Français Doivent Savoir en 2026
@@ -477,6 +483,14 @@ export default function Curacao() {
           </p>
         </details>
       </div>
+
+      <FaqSchema faqs={[
+        { question: "La licence Curaçao est-elle fiable pour les joueurs français ?", answer: "Cela dépend fortement de l'opérateur. Certains casinos sous licence Curaçao sont parfaitement fiables et opèrent depuis des années sans incident. D'autres, en revanche, profitent du cadre réglementaire plus souple pour adopter des pratiques discutables. Nous recommandons de consulter les avis de joueurs et de vérifier l'ancienneté du casino avant de s'inscrire." },
+        { question: "Quelle est la différence entre Antillephone et la nouvelle GCB ?", answer: "Antillephone N.V. était un détenteur de master licence privé qui sous-licenciait des opérateurs. La Curaçao Gaming Control Board (GCB) est une autorité gouvernementale créée en 2023 qui délivre directement les licences aux opérateurs avec des exigences nettement plus strictes. La GCB représente un progrès majeur pour la crédibilité de la juridiction." },
+        { question: "Que faire si un casino Curaçao refuse de payer mes gains ?", answer: "Commencez par contacter le support du casino en conservant toutes les preuves (captures d'écran, emails). Si aucune solution n'est trouvée, vous pouvez déposer une plainte auprès d'Antillephone ou de la GCB selon le type de licence. Vous pouvez également signaler le casino sur des forums spécialisés comme AskGamblers ou CasinoMeister, dont les médiateurs ont parfois plus d'influence que les régulateurs eux-mêmes." },
+        { question: "Un casino Curaçao peut-il bloquer les joueurs français ?", answer: "Oui, certains casinos sous licence Curaçao choisissent de bloquer les joueurs de certains pays, y compris la France, pour éviter les complications juridiques. Cependant, la majorité des casinos Curaçao acceptent les joueurs français. Vérifiez toujours les conditions générales du casino avant de vous inscrire pour confirmer que les joueurs français sont acceptés." },
+        { question: "Les nouvelles réglementations Curaçao sont-elles déjà en vigueur ?", answer: "La nouvelle législation a été adoptée en 2023, mais la période de transition s'étend sur plusieurs années. En 2026, certains opérateurs ont déjà obtenu la nouvelle licence GCB tandis que d'autres fonctionnent encore sous l'ancien système Antillephone. Nous recommandons de privilégier les casinos ayant déjà migré vers le nouveau cadre réglementaire." },
+      ]} />
     </article>
   );
 }

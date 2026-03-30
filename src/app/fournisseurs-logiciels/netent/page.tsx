@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Breadcrumb from "@/components/Breadcrumb";
+import FaqSchema from "@/components/FaqSchema";
 
 export const metadata: Metadata = {
   title: "NetEnt — Avis et Revue Compl\u00e8te 2026",
@@ -9,6 +11,11 @@ export const metadata: Metadata = {
 export default function NetEnt() {
   return (
     <article className="max-w-4xl mx-auto px-4 py-12">
+      <Breadcrumb items={[
+        { label: "Fournisseurs de Logiciels", href: "/fournisseurs-logiciels" },
+        { label: "NetEnt" },
+      ]} />
+
       {/* H1 */}
       <h1 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
         NetEnt : Avis Complet sur le Pionnier Su&eacute;dois des Machines
@@ -405,6 +412,13 @@ export default function NetEnt() {
           </p>
         </details>
       </div>
+
+      <FaqSchema faqs={[
+        { question: "NetEnt existe-t-il encore en tant que studio independant ?", answer: "Oui, meme si NetEnt a ete rachete par Evolution en 2020, le studio continue de developper et de publier des jeux sous la marque NetEnt. L'equipe creative reste en place a Stockholm et beneficie desormais des ressources supplementaires du groupe Evolution pour accelerer le developpement." },
+        { question: "Pourquoi Starburst est-il si populaire malgre sa simplicite ?", answer: "Le succes de Starburst repose sur sa simplicite justement : 10 lignes de paiement, un gameplay fluide, des gains frequents et une volatilite faible qui prolonge les sessions. Les casinos l'utilisent massivement pour les tours gratuits de bienvenue car son RTP equilibre et sa faible variance conviennent a tous les profils de joueurs." },
+        { question: "Quelle est la difference entre Dead or Alive 1 et Dead or Alive 2 ?", answer: "Dead or Alive 2 conserve le theme western de l'original mais offre trois modes de tours gratuits differents au lieu d'un seul. Le potentiel de gain maximal est considerablement plus eleve (plus de 100 000x la mise en mode High Noon). Les graphismes ont egalement ete entierement refaits avec des animations modernes." },
+        { question: "Les jeux NetEnt sont-ils disponibles en mode demo gratuit ?", answer: "Oui, la quasi-totalite des slots NetEnt sont disponibles en mode demo gratuit sur les casinos en ligne. Cela vous permet de tester les mecaniques, de decouvrir les fonctionnalites bonus et de vous familiariser avec un jeu avant de miser de l'argent reel. C'est particulierement utile pour des jeux complexes comme Dead or Alive 2." },
+      ]} />
     </article>
   );
 }

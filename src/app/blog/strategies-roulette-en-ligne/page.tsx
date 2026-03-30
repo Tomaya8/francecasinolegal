@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Breadcrumb from "@/components/Breadcrumb";
+import FaqSchema from "@/components/FaqSchema";
 
 export const metadata: Metadata = {
   title: "Les 5 meilleures strat&eacute;gies pour la Roulette en ligne",
@@ -9,6 +11,10 @@ export const metadata: Metadata = {
 export default function StrategiesRoulette() {
   return (
     <article className="max-w-4xl mx-auto px-4 py-12">
+      <Breadcrumb items={[
+        { label: "Blog", href: "/blog" },
+        { label: "Strategies roulette en ligne" },
+      ]} />
       <h1 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
         Les 5 meilleures strat&eacute;gies pour la Roulette en ligne
       </h1>
@@ -259,6 +265,14 @@ export default function StrategiesRoulette() {
           </p>
         </details>
       </div>
+
+      <FaqSchema faqs={[
+        { question: "Peut-on vraiment gagner a la roulette avec une strategie ?", answer: "A court terme, oui. Les strategies peuvent generer des gains sur des sessions limitees. Mais a long terme, l'avantage de la maison (2,7 % en roulette europeenne) est mathematiquement insurmontable. Les strategies sont des outils de gestion, pas des methodes pour battre le casino." },
+        { question: "Quelle est la meilleure strategie pour un debutant ?", answer: "La strategie D'Alembert est la plus recommandee pour les debutants. Sa progression lineaire (+1 unite apres une perte, -1 apres un gain) est facile a comprendre et limite les risques de pertes rapides. Le Paroli est egalement excellent car il limite votre exposition a la mise de base." },
+        { question: "La roulette europeenne est-elle meilleure que l'americaine ?", answer: "Oui, toujours. La roulette europeenne n'a qu'un seul zero (avantage maison de 2,7 %), contre deux zeros pour l'americaine (avantage de 5,26 %). Cela represente presque le double de l'avantage. Choisissez toujours la variante europeenne, ou mieux encore, la roulette francaise qui offre la regle La Partage (avantage reduit a 1,35 % sur les mises simples)." },
+        { question: "Les casinos en ligne bloquent-ils les joueurs qui utilisent des strategies ?", answer: "Non. Contrairement au comptage de cartes au blackjack, les strategies de mise a la roulette sont parfaitement acceptees par tous les casinos. L'avantage de la maison reste intact quelle que soit la strategie utilisee, donc les casinos n'ont aucune raison de les interdire." },
+        { question: "Combien faut-il de bankroll pour la strategie Martingale ?", answer: "Pour une mise de depart de 5 EUR, vous devez pouvoir supporter au moins 8 a 10 pertes consecutives, soit une bankroll de 1 275 a 5 115 EUR. La serie 5, 10, 20, 40, 80, 160, 320, 640 totalise deja 1 275 EUR de mises cumulees apres 8 pertes. C'est pourquoi la Martingale est reservee aux joueurs disposant d'une bankroll consequente." },
+      ]} />
     </article>
   );
 }

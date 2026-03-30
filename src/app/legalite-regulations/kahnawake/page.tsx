@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Breadcrumb from "@/components/Breadcrumb";
+import FaqSchema from "@/components/FaqSchema";
 
 export const metadata: Metadata = {
   title: "Licence Kahnawake — Guide pour les Joueurs Français",
@@ -9,6 +11,10 @@ export const metadata: Metadata = {
 export default function Kahnawake() {
   return (
     <article className="max-w-4xl mx-auto px-4 py-12">
+      <Breadcrumb items={[
+        { label: "Légalité & Régulations", href: "/legalite-regulations" },
+        { label: "Licence Kahnawake" },
+      ]} />
       {/* H1 */}
       <h1 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
         Licence Kahnawake — Guide Complet pour les Joueurs Français en 2026
@@ -557,6 +563,14 @@ export default function Kahnawake() {
           </p>
         </details>
       </div>
+
+      <FaqSchema faqs={[
+        { question: "La licence Kahnawake est-elle reconnue en France ?", answer: "Non, la licence Kahnawake n'est pas reconnue par l'ANJ et les casinos sous cette licence ne sont pas agréés en France. Comme pour les autres licences offshore (MGA, Curaçao), les joueurs français accèdent à ces plateformes en dehors du cadre légal français. Aucun joueur n'a toutefois jamais été poursuivi pour avoir joué sur un casino licencié par la KGC." },
+        { question: "La Kahnawake Gaming Commission est-elle indépendante du gouvernement canadien ?", answer: "Oui, la KGC opère sous l'autorité souveraine du Conseil des Mohawks de Kahnawake, et non sous la juridiction du gouvernement fédéral canadien. Le territoire Mohawk bénéficie d'un statut d'autodétermination reconnu par les traités historiques. Cela signifie que la régulation des jeux est entièrement gérée par les autorités Mohawk, indépendamment de la législation canadienne sur les jeux d'argent." },
+        { question: "Comment déposer une plainte auprès de la Kahnawake Gaming Commission ?", answer: "Pour déposer une plainte, rendez-vous sur le site officiel de la KGC (gamingcommission.ca) et remplissez le formulaire de plainte en ligne. Vous devrez fournir votre identité, les détails de votre compte joueur, une description du problème et toutes les preuves pertinentes (captures d'écran, correspondance avec le casino). La commission examinera votre plainte et contactera l'opérateur pour obtenir sa version des faits." },
+        { question: "Quels types de jeux un casino Kahnawake peut-il proposer ?", answer: "Un casino sous licence Kahnawake peut proposer l'ensemble des jeux d'argent en ligne : machines à sous, jeux de table (roulette, blackjack, baccarat), poker, jeux avec croupier en direct, paris sportifs et loteries. La KGC n'impose aucune restriction sur les catégories de jeux, contrairement à l'ANJ qui limite les jeux autorisés en France." },
+        { question: "Un casino peut-il détenir une licence Kahnawake et MGA simultanément ?", answer: "Oui, certains opérateurs détiennent des licences auprès de plusieurs juridictions pour couvrir différents marchés. Un casino peut très bien opérer sous licence MGA pour les joueurs européens et sous licence Kahnawake pour d'autres régions. Cette double licence est généralement un bon signe, car elle démontre la volonté de l'opérateur de se conformer à plusieurs cadres réglementaires et d'investir dans la conformité." },
+      ]} />
     </article>
   );
 }

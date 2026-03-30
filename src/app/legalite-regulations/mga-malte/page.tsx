@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Breadcrumb from "@/components/Breadcrumb";
+import FaqSchema from "@/components/FaqSchema";
 
 export const metadata: Metadata = {
   title: "Licence MGA Malte — Guide Complet pour Joueurs",
@@ -9,6 +11,10 @@ export const metadata: Metadata = {
 export default function MgaMalte() {
   return (
     <article className="max-w-4xl mx-auto px-4 py-12">
+      <Breadcrumb items={[
+        { label: "Légalité & Régulations", href: "/legalite-regulations" },
+        { label: "Licence MGA Malte" },
+      ]} />
       {/* H1 */}
       <h1 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
         Licence MGA Malte — Le Guide Complet pour les Joueurs Français en 2026
@@ -507,6 +513,13 @@ export default function MgaMalte() {
           </p>
         </details>
       </div>
+
+      <FaqSchema faqs={[
+        { question: "Un casino avec licence MGA est-il légal en France ?", answer: "Les casinos sous licence MGA ne sont pas agréés par l'ANJ et ne sont donc pas techniquement autorisés en France. Cependant, aucun joueur individuel n'a jamais été sanctionné pour avoir joué sur un casino MGA. La licence MGA reste la meilleure option pour les joueurs français souhaitant accéder à des jeux de casino en ligne avec un maximum de protections." },
+        { question: "Que se passe-t-il si un casino MGA refuse de payer mes gains ?", answer: "Si vous rencontrez un problème de paiement avec un casino sous licence MGA, vous pouvez d'abord contacter le service client du casino. Si le problème persiste, vous pouvez déposer une plainte gratuite auprès de l'organisme ADR désigné par la MGA. La MGA elle-même peut intervenir et sanctionner l'opérateur, allant jusqu'au retrait de la licence en cas de manquements graves." },
+        { question: "Comment savoir si une licence MGA est authentique ?", answer: "Rendez-vous sur le site officiel de la MGA (mga.org.mt) et utilisez l'outil de recherche de licence. Saisissez le numéro de licence affiché sur le site du casino (format MGA/B2C/XXX/XXXX). Le registre vous confirmera si la licence est active, suspendue ou révoquée, ainsi que le nom de la société détentrice." },
+        { question: "La licence MGA couvre-t-elle les jeux avec croupier en direct ?", answer: "Oui, la licence MGA B2C couvre l'ensemble des jeux de casino en ligne, y compris les jeux avec croupier en direct (live casino), les machines à sous, les jeux de table et les paris. Les fournisseurs de jeux en direct comme Evolution Gaming, Pragmatic Play Live et Playtech opèrent tous sous licence MGA." },
+      ]} />
     </article>
   );
 }

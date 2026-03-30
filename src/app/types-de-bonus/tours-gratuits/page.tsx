@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Breadcrumb from "@/components/Breadcrumb";
+import FaqSchema from "@/components/FaqSchema";
 
 export const metadata: Metadata = {
   title: "Tours Gratuits Casino — Free Spins Guide 2026",
@@ -9,6 +11,10 @@ export const metadata: Metadata = {
 export default function ToursGratuits() {
   return (
     <article className="max-w-4xl mx-auto px-4 py-12">
+      <Breadcrumb items={[
+        { label: "Types de Bonus", href: "/types-de-bonus" },
+        { label: "Tours Gratuits" },
+      ]} />
       <h1 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
         Tours Gratuits Casino : Le Guide Complet des Free Spins en 2026
       </h1>
@@ -288,6 +294,14 @@ export default function ToursGratuits() {
           </p>
         </details>
       </div>
+
+      <FaqSchema faqs={[
+        { question: "Quelle est la difference entre free spins et bonus spins ?", answer: "Les deux termes designent generalement la meme chose : des tours gratuits offerts par le casino. Certains casinos utilisent bonus spins pour distinguer les tours avec wagering des free spins sans wagering, mais cette distinction n'est pas universelle. Verifiez toujours les conditions specifiques de l'offre." },
+        { question: "Peut-on choisir la machine a sous pour ses tours gratuits ?", answer: "Dans la grande majorite des cas, non. Le casino designe une ou plusieurs machines specifiques pour les tours gratuits. Cela lui permet de controler la valeur attendue de l'offre. Certaines promotions exceptionnelles offrent des spins utilisables sur une selection de jeux, mais c'est rare." },
+        { question: "Les tours gratuits expirent-ils ?", answer: "Oui, les tours gratuits ont toujours une date d'expiration. Elle varie de 24 heures a 7 jours selon le casino. Si vous ne les utilisez pas dans le delai imparti, ils sont definitivement perdus. Les gains generes par les tours ont egalement leur propre delai pour remplir le wagering." },
+        { question: "Combien peut-on gagner avec des tours gratuits ?", answer: "Les gains dependent de la valeur du spin, du RTP de la machine et de la chance. En moyenne, 100 tours a 0,20 euro sur un slot a 96 % genereront environ 19,20 euros. Cependant, la variance peut produire des resultats tres differents : de 0 euro a plusieurs centaines d'euros si vous declenchez une fonctionnalite bonus." },
+        { question: "Les spins sans wagering existent-ils vraiment ?", answer: "Oui, mais ils sont rares. Des casinos comme ceux operant sous licence MGA proposent parfois des wager-free spins ou les gains sont immediatement retirables. Ces offres sont generalement reservees aux joueurs VIP ou proposees dans le cadre de promotions ponctuelles. Surveillez les newsletters des casinos pour ne pas les manquer." },
+      ]} />
     </article>
   );
 }

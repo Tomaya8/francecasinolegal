@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Breadcrumb from "@/components/Breadcrumb";
+import FaqSchema from "@/components/FaqSchema";
 
 export const metadata: Metadata = {
   title: "Programmes Affiliation Casino : Comment Gagner",
@@ -9,6 +11,10 @@ export const metadata: Metadata = {
 export default function ProgrammeAffiliationCasino() {
   return (
     <article className="max-w-4xl mx-auto px-4 py-12">
+      <Breadcrumb items={[
+        { label: "Blog", href: "/blog" },
+        { label: "Affiliation casino en ligne" },
+      ]} />
       <h1 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
         Programmes d&apos;Affiliation Casino : Comment Gagner en 2026
       </h1>
@@ -474,6 +480,14 @@ export default function ProgrammeAffiliationCasino() {
           promotion.
         </p>
       </div>
+
+      <FaqSchema faqs={[
+        { question: "Combien peut-on gagner avec l'affiliation casino ?", answer: "Les revenus varient enormement selon le trafic et la qualite des conversions. Un site debutant peut generer 500 a 2 000 EUR par mois apres 6 a 12 mois de travail. Les sites etablis avec un bon positionnement SEO peuvent atteindre 10 000 a 50 000 EUR par mois. Les plus gros affilies casino depassent les 100 000 EUR mensuels. La cle est la patience et la perseverance dans la creation de contenu de qualite." },
+        { question: "Faut-il un statut juridique pour faire de l'affiliation casino ?", answer: "Oui, des le premier euro de commission recu, vous devez disposer d'un statut juridique pour declarer ces revenus. La micro-entreprise est le statut le plus simple pour demarrer (inscription gratuite sur le site de l'URSSAF, regime fiscal simplifie). Au-dela de 77 700 EUR de chiffre d'affaires annuel, vous devrez creer une societe (SASU, EURL, SAS)." },
+        { question: "Peut-on promouvoir des casinos offshore en France ?", answer: "Non. La promotion de casinos en ligne non licencies par l'ANJ est illegale en France. L'article 57 de la loi du 12 mai 2010 interdit toute publicite en faveur d'un site de jeux non autorise. Les sanctions peuvent inclure des amendes de 100 000 EUR et jusqu'a 3 ans d'emprisonnement. Verifiez toujours la liste des operateurs agrees sur le site de l'ANJ avant de promouvoir un casino." },
+        { question: "Revenue Share ou CPA : quel modele choisir ?", answer: "Si vous debutez et avez besoin de tresorerie rapidement, le CPA est preferable. Si vous avez une vision a long terme et un trafic de qualite, le Revenue Share offre un potentiel de revenus bien superieur. Le modele hybride est souvent le meilleur compromis pour les affilies en phase de croissance. Dans tous les cas, diversifiez vos modeles pour ne pas dependre d'une seule source de revenus." },
+        { question: "Qu'est-ce que le carryover negatif en Revenue Share ?", answer: "Le carryover negatif survient lorsqu'un joueur que vous avez refere gagne plus qu'il ne perd durant un mois. Le casino enregistre une perte nette sur ce joueur, et ce deficit est reporte sur les mois suivants. Vous ne percevez aucune commission tant que le deficit n'est pas comble. Certains programmes no negative carryover remettent les compteurs a zero chaque mois - privilegiez-les." },
+      ]} />
     </article>
   );
 }

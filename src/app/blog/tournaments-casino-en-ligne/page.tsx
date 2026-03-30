@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Breadcrumb from "@/components/Breadcrumb";
+import FaqSchema from "@/components/FaqSchema";
 
 export const metadata: Metadata = {
   title: "Tournois de Casino en Ligne : Guide pour Gagner",
@@ -9,6 +11,10 @@ export const metadata: Metadata = {
 export default function TournamentsCasinoEnLigne() {
   return (
     <article className="max-w-4xl mx-auto px-4 py-12">
+      <Breadcrumb items={[
+        { label: "Blog", href: "/blog" },
+        { label: "Tournois de casino en ligne" },
+      ]} />
       <h1 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
         Tournois de Casino en Ligne : Le Guide Complet pour Gagner
       </h1>
@@ -246,6 +252,14 @@ export default function TournamentsCasinoEnLigne() {
           </p>
         </details>
       </div>
+
+      <FaqSchema faqs={[
+        { question: "Les tournois de casino sont-ils gratuits ?", answer: "Certains le sont (freerolls), mais la majorite necessitent un droit d'entree (buy-in) ou des mises reelles (leaderboards). Les freerolls sont parfaits pour debuter sans risque, tandis que les tournois payants offrent des prize pools nettement plus attractifs." },
+        { question: "Comment savoir quand un tournoi est disponible ?", answer: "Les casinos annoncent leurs tournois dans la section Promotions ou Tournois de leur site. Activez les notifications par e-mail ou push (sur mobile) pour etre informe en temps reel. Certains casinos proposent un calendrier de tournois recurrents que vous pouvez consulter a l'avance." },
+        { question: "Peut-on participer a plusieurs tournois simultanement ?", answer: "Oui, dans la plupart des casinos, vous pouvez vous inscrire a plusieurs tournois en meme temps. Cependant, nous recommandons de vous concentrer sur un ou deux tournois a la fois pour maximiser vos chances de bien vous classer plutot que de disperser vos efforts." },
+        { question: "Les gains de tournois sont-ils soumis a des conditions de mise ?", answer: "Cela depend du casino et du type de prix. Les gains en cash sont generalement sans conditions de mise (wager-free). En revanche, les tours gratuits ou bonus attribues comme prix sont souvent soumis aux conditions de mise habituelles du casino. Lisez toujours les termes et conditions avant de participer." },
+        { question: "Quelle est la meilleure strategie pour un tournoi de slots ?", answer: "Pour les tournois bases sur le multiplicateur le plus eleve, jouez a mise minimale et maximisez le nombre de spins. Pour les leaderboards a points, maintenez un rythme regulier tout au long de la periode. Dans tous les cas, choisissez des slots a haute volatilite pour viser les gros gains qui font la difference dans les classements." },
+      ]} />
     </article>
   );
 }

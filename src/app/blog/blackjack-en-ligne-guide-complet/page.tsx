@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Breadcrumb from "@/components/Breadcrumb";
+import FaqSchema from "@/components/FaqSchema";
 
 export const metadata: Metadata = {
   title: "Blackjack en Ligne : Guide Complet et Strat\u00e9gies",
@@ -9,6 +11,10 @@ export const metadata: Metadata = {
 export default function BlackjackEnLigneGuideComplet() {
   return (
     <article className="max-w-4xl mx-auto px-4 py-12">
+      <Breadcrumb items={[
+        { label: "Blog", href: "/blog" },
+        { label: "Guide complet du blackjack" },
+      ]} />
       <h1 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
         Blackjack en Ligne : Guide Complet et Strat&eacute;gies pour Gagner
       </h1>
@@ -221,6 +227,14 @@ export default function BlackjackEnLigneGuideComplet() {
           </p>
         </details>
       </div>
+
+      <FaqSchema faqs={[
+        { question: "Quel est le meilleur RTP au blackjack en ligne ?", answer: "Le Blackjack Switch offre le RTP le plus eleve a 99,87 %, suivi de l'Atlantic City Blackjack a 99,65 %. En appliquant la strategie de base optimale, l'avantage de la maison peut descendre sous 0,5 % sur la plupart des variantes classiques." },
+        { question: "Peut-on compter les cartes au blackjack en ligne ?", answer: "Non, le comptage de cartes est inefficace en ligne. Les jeux RNG melangent le sabot apres chaque main, et les tables live utilisent 8 jeux avec une coupe profonde. Concentrez-vous plutot sur la strategie de base qui reduit l'avantage maison de maniere significative." },
+        { question: "Faut-il prendre l'assurance au blackjack ?", answer: "Non, jamais. L'assurance est un pari annexe avec un avantage de la maison d'environ 7,4 %. Meme lorsque le croupier montre un As, les probabilites sont contre vous. La strategie de base recommande systematiquement de refuser l'assurance." },
+        { question: "Quelle variante de blackjack choisir pour debuter ?", answer: "Le Classic Blackjack ou l'European Blackjack sont les meilleurs choix pour les debutants. Les regles sont standards, le RTP est excellent, et la strategie de base s'applique directement. Evitez le Spanish 21 au debut car l'absence des 10 modifie la strategie optimale." },
+        { question: "Le blackjack en direct est-il plus fiable que le blackjack RNG ?", answer: "Les deux formats sont parfaitement fiables lorsqu'ils sont proposes par des casinos licencies. Le blackjack en direct utilise de vraies cartes filmees en temps reel, ce qui offre une transparence visuelle. Le blackjack RNG est certifie par des organismes independants comme eCOGRA. Le choix depend de vos preferences personnelles." },
+      ]} />
     </article>
   );
 }

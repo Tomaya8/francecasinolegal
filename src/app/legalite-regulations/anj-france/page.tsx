@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Breadcrumb from "@/components/Breadcrumb";
+import FaqSchema from "@/components/FaqSchema";
 
 export const metadata: Metadata = {
   title: "L'ANJ : Autorité Nationale des Jeux en France",
@@ -9,6 +11,10 @@ export const metadata: Metadata = {
 export default function AnjFrance() {
   return (
     <article className="max-w-4xl mx-auto px-4 py-12">
+      <Breadcrumb items={[
+        { label: "Légalité & Régulations", href: "/legalite-regulations" },
+        { label: "L'ANJ France" },
+      ]} />
       {/* H1 */}
       <h1 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
         L&apos;ANJ — Autorité Nationale des Jeux en France : Guide Complet 2026
@@ -490,6 +496,14 @@ export default function AnjFrance() {
           </p>
         </details>
       </div>
+
+      <FaqSchema faqs={[
+        { question: "Quelle est la différence entre l'ANJ et l'ARJEL ?", answer: "L'ARJEL ne régulait que les jeux en ligne, tandis que l'ANJ supervise l'ensemble du secteur des jeux d'argent en France, y compris les casinos physiques, la Française des Jeux et les paris hippiques. L'ANJ dispose également de pouvoirs de sanction plus importants et d'un mandat renforcé en matière de prévention de l'addiction." },
+        { question: "L'ANJ autorise-t-elle les machines à sous en ligne ?", answer: "Non. En 2026, les machines à sous, la roulette, le blackjack et tous les jeux de casino en ligne restent interdits en France. Seuls les paris sportifs, les paris hippiques et le poker en ligne sont autorisés. Des discussions sont en cours pour une éventuelle ouverture du marché, mais aucune date n'a été fixée." },
+        { question: "Comment signaler un site illégal à l'ANJ ?", answer: "Vous pouvez signaler un site de jeux non agréé directement sur le site officiel de l'ANJ (anj.fr) via le formulaire de signalement en ligne. L'autorité dispose d'une cellule dédiée qui traite ces signalements et peut ordonner le blocage des sites incriminés auprès des fournisseurs d'accès à Internet français." },
+        { question: "Les gains sur les sites agréés ANJ sont-ils imposables ?", answer: "Pour les joueurs récréatifs, les gains de jeux d'argent ne sont généralement pas imposables en France. Cependant, les joueurs professionnels dont les gains constituent une source régulière de revenus peuvent être soumis à l'impôt sur le revenu. En cas de doute, il est recommandé de consulter un expert-comptable spécialisé." },
+        { question: "Peut-on s'inscrire sur plusieurs sites agréés ANJ à la fois ?", answer: "Oui, il n'y a aucune restriction sur le nombre de comptes que vous pouvez ouvrir chez différents opérateurs agréés. Beaucoup de joueurs s'inscrivent sur plusieurs plateformes pour comparer les cotes, profiter de différents bonus et diversifier leur expérience de jeu. La seule règle est de ne posséder qu'un seul compte par opérateur." },
+      ]} />
     </article>
   );
 }
