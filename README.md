@@ -1,36 +1,93 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# FranceCasinoLegal.com
 
-## Getting Started
+Casino affiliate website targeting French-speaking online casino players. Covers legality, regulations, game providers, payment methods, bonuses, and strategies.
 
-First, run the development server:
+**Live:** https://francecasinolegal.vercel.app
+**Domain:** francecasinolegal.com (pending DNS)
+
+## Tech Stack
+
+- **Framework:** Next.js 16 (App Router, TypeScript)
+- **Styling:** Tailwind CSS 4
+- **Hosting:** Vercel (auto-deploy from `main`)
+- **Language:** 100% French content
+
+## Site Architecture (47 routes)
+
+### Core Pages (6)
+| Route | Description |
+|-------|-------------|
+| `/` | Homepage — casino comparison, guides overview |
+| `/legalite-regulations` | French gambling law, ANJ, offshore licenses |
+| `/fournisseurs-logiciels` | Game provider reviews (Evolution, Pragmatic, etc.) |
+| `/solutions-paiement` | Payment methods (crypto, cards, e-wallets) |
+| `/types-de-bonus` | Bonus types and wagering conditions |
+| `/blog` | Blog index — 20 articles with images |
+
+### Sub-Pages (16)
+| Section | Pages |
+|---------|-------|
+| Licenses (4) | ANJ France, MGA Malte, Curacao, Kahnawake |
+| Providers (6) | Evolution Gaming, Pragmatic Play, NetEnt, Play'n GO, Microgaming, Yggdrasil |
+| Bonus Types (6) | Bienvenue, Sans depot, Tours gratuits, Cashback, VIP, Rechargement |
+
+### Blog Articles (20)
+Casino fiable, Wagering, VPN, Crypto vs traditionnel, Roulette strategies, Live casino, Licences, Bankroll, RTP, Retraits, Blackjack, Mobile apps, Jackpots progressifs, Baccarat, Tournois, Addiction, Fiscalite, Volatilite, Jeux de table, Affiliation
+
+## SEO Features
+
+- Meta title (max 60 chars) + description (max 155 chars) on every page
+- Open Graph + Twitter Card meta tags
+- JSON-LD FAQ schema on all 36 pages with FAQs
+- Dynamic `sitemap.xml` (all 45 routes)
+- `robots.txt` allowing all crawlers
+- Canonical URLs via `metadataBase`
+- H1/H2/H3 semantic heading hierarchy
+- Image placeholders with descriptive alt text
+- `lang="fr"` on HTML root
+
+## Content Requirements (per page)
+
+Every page follows these guidelines:
+- Minimum 600 words in native French
+- Comparison table
+- Pros & Cons section
+- FAQ section (3-5 questions, `<details>`/`<summary>`)
+- Image placeholders with SEO alt text
+- Target keyword noted
+
+## Components
+
+| Component | Description |
+|-----------|-------------|
+| `Header` | Sticky nav with mobile hamburger menu |
+| `Footer` | 3-column with links, legal info, 18+ warning |
+| `Breadcrumb` | Navigation trail on all 36 sub-pages |
+| `FaqSchema` | JSON-LD structured data for FAQ sections |
+
+## Security Headers
+
+Configured in `next.config.ts`:
+- `X-Content-Type-Options: nosniff`
+- `X-Frame-Options: DENY`
+- `X-XSS-Protection: 1; mode=block`
+- `Referrer-Policy: strict-origin-when-cross-origin`
+- `Permissions-Policy: camera=(), microphone=(), geolocation=()`
+
+## Development
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev     # http://localhost:3000
+npm run build   # Production build
+npm run lint    # ESLint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## DNS Setup (Vercel)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Add these records at your registrar:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Type | Name | Value |
+|------|------|-------|
+| A | @ | 76.76.21.21 |
+| CNAME | www | cname.vercel-dns.com |
