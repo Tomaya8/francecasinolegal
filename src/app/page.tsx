@@ -25,7 +25,7 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/legalite-regulations"
-              className="bg-gold text-background font-semibold px-6 py-3 rounded-lg hover:bg-gold-light transition-colors no-underline"
+              className="bg-gold text-foreground font-semibold px-6 py-3 rounded-lg hover:bg-gold-light transition-colors no-underline"
             >
               Comprendre la Légalité
             </Link>
