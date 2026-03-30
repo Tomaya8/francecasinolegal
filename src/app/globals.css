@@ -15,17 +15,17 @@
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-gold: var(--gold);
-  --color-gold-light: var(--gold-light);
-  --color-gold-dark: var(--gold-dark);
-  --color-card-bg: var(--card-bg);
-  --color-card-border: var(--card-border);
-  --color-accent-green: var(--accent-green);
-  --color-accent-red: var(--accent-red);
-  --color-muted: var(--muted);
-  --color-section-bg: var(--section-bg);
+  --color-background: rgb(255 255 255 / <alpha-value>);
+  --color-foreground: rgb(26 26 46 / <alpha-value>);
+  --color-gold: rgb(184 134 11 / <alpha-value>);
+  --color-gold-light: rgb(201 148 15 / <alpha-value>);
+  --color-gold-dark: rgb(139 105 20 / <alpha-value>);
+  --color-card-bg: rgb(248 249 252 / <alpha-value>);
+  --color-card-border: rgb(226 229 239 / <alpha-value>);
+  --color-accent-green: rgb(22 163 74 / <alpha-value>);
+  --color-accent-red: rgb(220 38 38 / <alpha-value>);
+  --color-muted: rgb(100 116 139 / <alpha-value>);
+  --color-section-bg: rgb(241 243 248 / <alpha-value>);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
